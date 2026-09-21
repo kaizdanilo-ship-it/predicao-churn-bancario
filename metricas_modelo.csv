@@ -1,0 +1,2 @@
+model,test_rows,churn_prevalence,roc_auc,pr_auc,precision,recall,f1,customers_flagged,true_positives,false_positives,false_negatives,true_negatives
+Random Forest,2000,0.2035,0.8654818146343569,0.7001851020390005,0.5489833641404805,0.7297297297297297,0.6265822784810127,541.0,297.0,244.0,110.0,1349.0
