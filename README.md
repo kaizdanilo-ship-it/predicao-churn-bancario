@@ -30,7 +30,6 @@ Este dataset é de corte transversal (não contém histórico temporal nem recei
 - 🎂 **Faixa Etária:** Clientes entre 51–60 anos atingem **56,2%** de churn (e 34,0% entre 41–50 anos).
 - 📦 **Produtos:** Clientes com apenas 1 produto têm **27,7%** de churn, enquanto aqueles com 2 produtos caem para **7,6%**. *(Nota: Clientes com 3 e 4 produtos apresentam taxas atipicamente altas, mas representam amostras pequenas de 266 e 60 clientes, exigindo validação antes do rollout).*
 
-![Segmentos e Variáveis](images/eda_segmentos_variaveis.png)
 
 ---
 
