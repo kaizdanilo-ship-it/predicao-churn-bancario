@@ -1,15 +1,15 @@
-# 📊 Predição de Churn Bancário & Estratégias de Retenção
+#  Predição de Churn Bancário & Estratégias de Retenção
 
 > **Objetivo:** Construir um modelo preditivo para priorizar clientes com maior risco de cancelamento (*churn*) e transformar a saída do modelo em ações operacionais de retenção de alto impacto.
 
 ---
 
-## ⚠️ Nota sobre os Dados & Escopo
+##  Nota sobre os Dados & Escopo
 Este dataset é de corte transversal (não contém histórico temporal nem receita/margem por cliente). Portanto, a análise foca em **estratégia de priorização e capacidade operacional**, e não no cálculo de impacto financeiro líquido real. Para implementação em produção, recomenda-se a inclusão de janelas de previsão, custo por oferta e valor de vida do cliente (LTV).
 
 ---
 
-## 📈 Dados & Panorama Geral
+##  Dados & Panorama Geral
 - **Base de Dados:** 10.000 clientes e 14 atributos (sem valores ausentes).
 - **Variável-alvo:** `Exited` (`1` = cancelou; `0` = permaneceu).
 - **Taxa de Churn Observada:** **20,4%** (2.037 clientes).
@@ -17,7 +17,7 @@ Este dataset é de corte transversal (não contém histórico temporal nem recei
 
 ---
 
-## 💡 Perguntas de Negócio & Insights
+##  Perguntas de Negócio & Insights
 
 ![Análise Exploratória de Dados](images/eda_churn.png)
 
@@ -34,7 +34,7 @@ Este dataset é de corte transversal (não contém histórico temporal nem recei
 
 ---
 
-## 🤖 Desempenho do Modelo Preditivo
+##  Desempenho do Modelo Preditivo
 
 Divisão dos dados em **80% treino / 20% teste** (estratificada, `random_state=42`). O modelo final adotado foi um **Random Forest** com peso de classe balanceado.
 
@@ -53,7 +53,7 @@ Divisão dos dados em **80% treino / 20% teste** (estratificada, `random_state=4
 
 ---
 
-## 🎯 Escolha do Limiar Operacional (Trade-off)
+##  Escolha do Limiar Operacional (Trade-off)
 
 O limiar (*threshold*) deve ser escolhido para maximizar o valor esperado da operação:
 
@@ -71,7 +71,7 @@ $$\text{Valor}_i = p_i \times \text{taxa\_de\_sucesso} \times \text{margem\_reti
 
 ---
 
-## 🚀 Recomendações Práticas
+##  Recomendações Práticas
 1. **Priorização Dinâmica:** Ordenar contatos por risco predito e valor estimado do cliente.
 2. **Jornadas Personalizadas:** Criar réguas de comunicação específicas para a Alemanha, clientes inativos e faixas etárias acima de 40 anos.
 3. **Investigação de Produto:** Investigar o motivo de insatisfação do grupo de 3–4 produtos (possíveis gargalos de usabilidade ou precificação).
@@ -79,14 +79,14 @@ $$\text{Valor}_i = p_i \times \text{taxa\_de\_sucesso} \times \text{margem\_reti
 
 ---
 
-## ⚠️ Limitações & Próximos Passos
+##  Limitações & Próximos Passos
 - **Temporalidade:** Criar *snapshots* mensais em produção para garantir precedência temporal das variáveis.
 - **Ética e Viés:** Monitorar variáveis como gênero para evitar viés algorítmico em decisões automáticas.
 - **Enriquecimento de Dados:** Incorporar dados de uso de canais, chamados no suporte, reclamações e NPS.
 
 ---
 
-## 📂 Estrutura do Repositório & Arquivos
+##  Estrutura do Repositório & Arquivos
 
 ```text
 Projeto/
